@@ -1,0 +1,79 @@
+Why String is immutable in java?
+the reason of making string final is to destory the immutability and to not allow others to extend it and because of the security, synchronization and
+ concurrency, caching, and class loading. makes the String thread safe since they won't be changed when accessed from multiple threads.
+ 
+ 
+ 
+ what is the difference between String and String Builder?
+ A string is immutable in java
+ String can't be changed when we use the String class 
+ while a StringBuilder is mutable in java
+ if the user used String Builder class they can Change the String
+ 
+ 
+ 
+ Write some of the methods of String class at least 5 with example.
+ 
+ 1.charaAt()
+ Ex:
+ String str="Masai";
+ char res = str.charAt(0);
+ System.out.println(res);
+ 
+ 
+ 2.concat()
+ Ex:
+ String arr1="welcome";
+ String arr2="to java";
+ System.out.println(arr1.concat(arr2));
+ 
+ 
+ 3.equals()
+ Ex:
+ String arr1="welcome";
+ String arr2="to java";
+ String arr3="welcome";
+ System.out.println(arr1.equals(arr2));
+ System.out.println(arr1.equals(arr3));
+ 
+ 
+ 4.LowerCase()
+ Ex:
+ String arr1="welcome to java";
+System.out.println(arr1.toLowerCase());
+
+
+4.UpperCase()
+ Ex:
+ String arr1="welcome to java";
+System.out.println(arr1.toUpperCase());
+
+
+
+Q2) What is the difference between equals method and == operator in java? And what will be the output of the
+following code snippets and giving proper explanation.
+
+ equals method for content comparison and == operator for reference comparison 
+equals evaluates to the comparison of values in object == is a reffernce comparison, i.e. both object point to same memory location,
+equals is the operator and == operator is that one is methods
+
+        String s1 = new String("abc");
+	    String s2 = new String("abc");
+	    System.out.println(s1.equals(s2));
+	    
+	    Answer:True because equals evaluates to the comparison of values in object
+		
+		
+		StringBuilder sb1 = new StringBuilder("abc");
+		StringBuilder sb2 = new StringBuilder("abc");
+		System.out.println(sb1.equals(sb2));
+		
+		Answer:False because stringBuilder is non-Synchoronized it's case sensitive 
+		
+		String s1 = new String("abc");
+		String s2 = new String("abc");
+		System.out.println(s1==s2);
+		
+		Answer:False because it's reffernce comparison, i.e. both object point to same memory location
+
+ 
